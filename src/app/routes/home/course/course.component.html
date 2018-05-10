@@ -1,0 +1,13 @@
+<a routerLink="/cdetails/{{course.name}}">
+  <div class="course">
+    <div class="coursepic">
+      <img src="..//..//..//..//assets/images/{{course.image}}">
+    </div>
+    <h3>{{ course.name | uppercase }}</h3>
+    <div class="price">Price: {{course.price | currency: 'INR': true}}</div>
+    <div class="offer">{{ temp | offercode: course.price }}</div>
+    <div class="description">
+      {{ course.description }}
+    </div>
+  </div>
+</a>

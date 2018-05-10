@@ -1,0 +1,23 @@
+<div class="form">
+    <div class="field"></div>
+    <div class="field">Name</div>
+    <div class="form-control">
+        <input type="text" [(ngModel)] = "name">
+    </div>
+    <div class="field">Email</div>
+    <div class="form-control">
+        <input type="text" [(ngModel)] = "email">
+    </div>
+    <div class="field">Message</div>
+    <div class="form-control">
+        <textarea [(ngModel)] = "message" rows="5" col="40"></textarea>
+    </div>
+    <div align="center" >
+        <button class="btn btn-danger" (click) = "sendEnquiry()">Enquire</button>
+    </div>
+    <div class="validation" *ngIf="errors">
+        <ul>
+            <li *ngFor="let error of errorlist">{{ error }}</li>
+        </ul>
+    </div>
+</div>

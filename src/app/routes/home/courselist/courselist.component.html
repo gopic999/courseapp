@@ -1,0 +1,10 @@
+<div>
+  Filter courseList
+  <select [(ngModel)]="pricetype">
+    <option>All courses</option>
+    <option>Highly priced</option>
+    <option>Moderately priced</option>
+    <option>Normal</option>
+  </select>
+</div>
+<course *ngFor="let course of courseList" [course] = "course"></course>
